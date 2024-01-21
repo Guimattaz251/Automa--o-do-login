@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-01-21T11:11:26.176429" rpa="false" schemaversion="5">
+<suite id="s1" name="Login" source="D:\Automatização login\tests\Login.robot">
+<test id="s1-t1" name="Cenário 1: Efetuo o login no site" line="6">
+<kw name="Dado que eu entro na página de Login" owner="TestCases_Login">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-01-21T11:11:26.349837" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-01-21T11:11:26.349837" elapsed="2.409838"/>
+</kw>
+<status status="PASS" start="2024-01-21T11:11:26.348836" elapsed="2.410839"/>
+</kw>
+<kw name="Quando eu insiro os meus dados" owner="TestCases_Login">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-21T11:11:28.760998" level="INFO">Typing text 'standard_user' into text field '//input[@id="user-name"]'.</msg>
+<arg>${Login.Input_UserName}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-21T11:11:28.759675" elapsed="0.193645"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-21T11:11:28.955694" level="INFO">Typing text 'secret_sauce' into text field '//input[@id="password"]'.</msg>
+<arg>${Login.Input_Password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-21T11:11:28.954593" elapsed="0.123522"/>
+</kw>
+<status status="PASS" start="2024-01-21T11:11:28.759675" elapsed="0.318440"/>
+</kw>
+<kw name="E clico no botão de Login" owner="TestCases_Login">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-01-21T11:11:29.079352" level="INFO">Clicking button '//input[@id="login-button"]'.</msg>
+<arg>${Login.Button_Login}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-21T11:11:29.079352" elapsed="0.124888"/>
+</kw>
+<status status="PASS" start="2024-01-21T11:11:29.078115" elapsed="0.126125"/>
+</kw>
+<kw name="então sou redirecionado para o inventário" owner="TestCases_Login">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-01-21T11:11:29.250952" level="INFO">Element '//span[@class="title"]' is displayed.</msg>
+<arg>${Prova}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-21T11:11:29.205240" elapsed="0.045712"/>
+</kw>
+<status status="PASS" start="2024-01-21T11:11:29.205240" elapsed="0.045712"/>
+</kw>
+<status status="PASS" start="2024-01-21T11:11:26.347837" elapsed="2.903115"/>
+</test>
+<status status="PASS" start="2024-01-21T11:11:26.178429" elapsed="3.074530"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
